@@ -16,9 +16,114 @@ public class UI implements InitializingBean {
 	EventHandler eventHandler;
 
 
+	private JFrame jFrame;
+	private JLabel label1, quotelabel;
+	private JTextField zoekwoord;
+	private JPanel controlpanel;
+	private JButton btnsavequotes,btngetallquotes,btnsearch;
 
+	public UI() {}
 
+	public void setupUI() {
+		jFrame = new JFrame("QuotesApp");
+		jFrame.setLayout(new FlowLayout());
 
+		controlpanel = new JPanel();
+		controlpanel.setLayout(new GridLayout(2,2));
+
+		label1 = new JLabel("zoekwoord: ");
+		zoekwoord = new JTextField(15);
+
+		quotelabel = new JLabel("");
+		btnsavequotes = new JButton();
+		btnsavequotes.setText("alles opslaan");
+		btnsavequotes.addActionListener(eventHandler::whenSaveButtonClicked);
+
+		controlpanel.add(label1);
+		controlpanel.add(zoekwoord);
+		controlpanel.add(quotelabel);
+		controlpanel.add(btnsavequotes);
+
+		jFrame.add(controlpanel);
+
+		jFrame.setSize(800,800);
+		jFrame.setLocationRelativeTo(null);
+		jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		jFrame.pack();
+		jFrame.setVisible(true);
+	}
+
+	public EventHandler getEventHandler() {
+		return eventHandler;
+	}
+
+	public void setEventHandler(EventHandler eventHandler) {
+		this.eventHandler = eventHandler;
+	}
+
+	public JFrame getjFrame() {
+		return jFrame;
+	}
+
+	public void setjFrame(JFrame jFrame) {
+		this.jFrame = jFrame;
+	}
+
+	public JLabel getLabel1() {
+		return label1;
+	}
+
+	public void setLabel1(JLabel label1) {
+		this.label1 = label1;
+	}
+
+	public JLabel getQuotelabel() {
+		return quotelabel;
+	}
+
+	public void setQuotelabel(JLabel quotelabel) {
+		this.quotelabel = quotelabel;
+	}
+
+	public JTextField getZoekwoord() {
+		return zoekwoord;
+	}
+
+	public void setZoekwoord(JTextField zoekwoord) {
+		this.zoekwoord = zoekwoord;
+	}
+
+	public JPanel getControlpanel() {
+		return controlpanel;
+	}
+
+	public void setControlpanel(JPanel controlpanel) {
+		this.controlpanel = controlpanel;
+	}
+
+	public JButton getBtnsavequotes() {
+		return btnsavequotes;
+	}
+
+	public void setBtnsavequotes(JButton btnsavequotes) {
+		this.btnsavequotes = btnsavequotes;
+	}
+
+	public JButton getBtngetallquotes() {
+		return btngetallquotes;
+	}
+
+	public void setBtngetallquotes(JButton btngetallquotes) {
+		this.btngetallquotes = btngetallquotes;
+	}
+
+	public JButton getBtnsearch() {
+		return btnsearch;
+	}
+
+	public void setBtnsearch(JButton btnsearch) {
+		this.btnsearch = btnsearch;
+	}
 
 	@Override
 	public void afterPropertiesSet() throws Exception {

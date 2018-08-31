@@ -10,7 +10,7 @@ public class QuoteApp {
     private QuoteRepository repository;
 
     @Autowired
-    public void setQuoteRepository(QuoteRepository quoteRepository) {this.repository = quoteRepository}
+    public void setQuoteRepository(QuoteRepository quoteRepository) {this.repository = quoteRepository;}
 
     private String[] quotes = {"Alas, I am dying beyond my means. (sipping champagne on his deathbed)",
             "As long as war is regarded as wicked, it will always have its  fascination. When it is looked upon as vulgar, it will cease to be popular.",
