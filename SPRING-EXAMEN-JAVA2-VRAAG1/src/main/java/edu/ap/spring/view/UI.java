@@ -47,10 +47,14 @@ public class UI implements InitializingBean {
 		btngetallquotes.setText("alles ophalen");
 		btngetallquotes.addActionListener(eventHandler::whenGetButtonClicked);
 
+		btnsearch = new JButton();
+		btnsearch.setText("zoek!");
+		btnsearch.addActionListener(eventHandler::whenSearchButtonClicked);
+
 
 		controlpanel.add(label1);
 		controlpanel.add(zoekwoord);
-		controlpanel.add(quotelabel);
+		controlpanel.add(btnsearch);
 		controlpanel.add(btnsavequotes);
 		controlpanel.add(allequotes);
 		controlpanel.add(btngetallquotes);

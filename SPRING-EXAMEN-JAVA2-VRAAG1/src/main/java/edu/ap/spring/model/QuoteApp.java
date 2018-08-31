@@ -5,7 +5,13 @@ import edu.ap.spring.jpa.QuoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
+import java.util.Scanner;
 
 @Component
 public class QuoteApp {
@@ -14,24 +20,20 @@ public class QuoteApp {
     @Autowired
     public void setQuoteRepository(QuoteRepository quoteRepository) {this.repository = quoteRepository;}
 
-    private String[] quotes = {"Alas, I am dying beyond my means. (sipping champagne on his deathbed)",
-            "As long as war is regarded as wicked, it will always have its  fascination. When it is looked upon as vulgar, it will cease to be popular.",
-            "Democracy means simply the bludgeoning of the people by the people for the people.",
-            "Fashion is a form of ugliness so intolerable that we have to alter it every six months.",
-            "The only way to behave to a woman is to make love to her if she is pretty and to someone else if she is plain.",
-            "The only way to get rid of a temptation is to yield to it.",
-            "There is only one thing in the world worse than being talked about, and that is not being talked about.",
-            "Whenever people agree with me I always feel I must be wrong.",
-            "Why was I born with such contemporaries?",
-            "Young men want to be faithful and are not; old men want to be faithless and cannot."};
 
+    public void saveAllQuotes()
+        throws IOException
+    {
 
-    public void saveAllQuotes() {
-        for (int i = 0;i < (quotes.length - 1);i++)
+        List<String> list = Files.readAllLines((new File("oscar_wilde.txt").toPath()));
+        String[] s = list.toArray(new String[0]);
+        for (int i = 0;i < (s.length - 1);i++)
         {
-            Quote newquote = new Quote(quotes[i]);
+            Quote newquote = new Quote(s[i]);
             repository.save(newquote);
         }
+
+
     }
 
 

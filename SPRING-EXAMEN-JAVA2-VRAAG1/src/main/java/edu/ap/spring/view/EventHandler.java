@@ -4,7 +4,9 @@ import edu.ap.spring.model.QuoteApp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
+import java.io.IOException;
 
 @Service
 public class EventHandler {
@@ -23,8 +25,14 @@ public class EventHandler {
 
     public void whenSaveButtonClicked(ActionEvent actionEvent)
     {
-        quoteapp.saveAllQuotes();
+        try {
+            quoteapp.saveAllQuotes();
+        }
+        catch (IOException ex) {
+            System.out.println(ex);
+        }
     }
+
 
     public void whenGetButtonClicked(ActionEvent actionEvent)
     {
@@ -33,6 +41,11 @@ public class EventHandler {
         {
             ui.getAllequotes().append(s[i]);
         }
+    }
+
+    public void whenSearchButtonClicked(ActionEvent actionEvent)
+    {
+
     }
 
 }
