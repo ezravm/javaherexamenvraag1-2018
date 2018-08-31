@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -38,18 +39,23 @@ public class QuoteApp {
 
 
     public String[] getAllQuotes() {
-        String[] s = null;
+        String[] s = new String[9];
         int i = 0;
         Iterable<Quote> iterable = repository.findAll();
         for (Quote q : iterable) {
             s[i] = q.getQuote();
+            i++;
         }
         return s;
     }
 
-    public String getSearchedQuote(String zoekwoord)
+    public ArrayList<Quote> getSearchedQuote(String zoekwoord)
     {
+        /*
         Quote existing = repository.findAllByQuoteContaining(zoekwoord);
-        return existing.getQuote();
+        return existing.getQuote();*/
+        return repository.findAllByQuoteContaining(zoekwoord);
+
+
     }
 }
