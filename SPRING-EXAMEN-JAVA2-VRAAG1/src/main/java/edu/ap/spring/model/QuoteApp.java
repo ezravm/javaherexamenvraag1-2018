@@ -47,4 +47,9 @@ public class QuoteApp {
         return s;
     }
 
+    public String getSearchedQuote(String zoekwoord)
+    {
+        Quote existing = repository.findAllByQuoteContaining(zoekwoord);
+        return existing.getQuote();
+    }
 }

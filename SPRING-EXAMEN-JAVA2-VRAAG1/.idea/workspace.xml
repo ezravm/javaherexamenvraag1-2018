@@ -82,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuoteApp.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QuoteApp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/ap/spring/model/QuoteApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="31" column="45" lean-forward="true" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+            <state relative-caret-position="370">
+              <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventHandler.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EventHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/ap/spring/view/EventHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="319">
+              <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#411#412#0" expanded="true" />
@@ -144,8 +144,8 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/ap/spring/QuoteApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/ap/spring/jpa/QuoteRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/ap/spring/view/UI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/edu/ap/spring/view/EventHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/ap/spring/model/QuoteApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/ap/spring/view/EventHandler.java" />
       </list>
     </option>
   </component>
@@ -326,12 +326,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1535715172298</updated>
-      <workItem from="1535715177174" duration="5530000" />
+      <workItem from="1535715177174" duration="5996000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5530000" />
+    <option name="totallyTimeSpent" value="5996000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -416,18 +416,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ap/spring/view/EventHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/ap/spring/view/UI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-82">
@@ -480,10 +468,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/ap/spring/model/QuoteApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="31" column="45" lean-forward="true" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+        <state relative-caret-position="370">
+          <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/ap/spring/view/EventHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
           </folding>
         </state>
       </provider>

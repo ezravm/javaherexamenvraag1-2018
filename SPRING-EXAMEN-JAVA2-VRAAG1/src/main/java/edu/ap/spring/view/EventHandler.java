@@ -27,6 +27,7 @@ public class EventHandler {
     {
         try {
             quoteapp.saveAllQuotes();
+            ui.getAllequotes().append("alle quotes zijn opgelagen.");
         }
         catch (IOException ex) {
             System.out.println(ex);
@@ -45,7 +46,8 @@ public class EventHandler {
 
     public void whenSearchButtonClicked(ActionEvent actionEvent)
     {
-
+        String zoekwoord = ui.getZoekwoord().getText();
+        ui.getAllequotes().append(quoteapp.getSearchedQuote(zoekwoord));
     }
 
 }
