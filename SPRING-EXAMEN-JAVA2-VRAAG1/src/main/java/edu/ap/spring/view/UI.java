@@ -21,6 +21,7 @@ public class UI implements InitializingBean {
 	private JTextField zoekwoord;
 	private JPanel controlpanel;
 	private JButton btnsavequotes,btngetallquotes,btnsearch;
+	private JTextArea allequotes;
 
 	public UI() {}
 
@@ -29,20 +30,30 @@ public class UI implements InitializingBean {
 		jFrame.setLayout(new FlowLayout());
 
 		controlpanel = new JPanel();
-		controlpanel.setLayout(new GridLayout(2,2));
+		controlpanel.setLayout(new GridLayout(3,2));
 
 		label1 = new JLabel("zoekwoord: ");
 		zoekwoord = new JTextField(15);
 
+		allequotes = new JTextArea();
+
 		quotelabel = new JLabel("");
+
 		btnsavequotes = new JButton();
 		btnsavequotes.setText("alles opslaan");
 		btnsavequotes.addActionListener(eventHandler::whenSaveButtonClicked);
+
+		btngetallquotes = new JButton();
+		btngetallquotes.setText("alles ophalen");
+		btngetallquotes.addActionListener(eventHandler::whenGetButtonClicked);
+
 
 		controlpanel.add(label1);
 		controlpanel.add(zoekwoord);
 		controlpanel.add(quotelabel);
 		controlpanel.add(btnsavequotes);
+		controlpanel.add(allequotes);
+		controlpanel.add(btngetallquotes);
 
 		jFrame.add(controlpanel);
 
@@ -123,6 +134,14 @@ public class UI implements InitializingBean {
 
 	public void setBtnsearch(JButton btnsearch) {
 		this.btnsearch = btnsearch;
+	}
+
+	public JTextArea getAllequotes() {
+		return allequotes;
+	}
+
+	public void setAllequotes(JTextArea allequotes) {
+		this.allequotes = allequotes;
 	}
 
 	@Override

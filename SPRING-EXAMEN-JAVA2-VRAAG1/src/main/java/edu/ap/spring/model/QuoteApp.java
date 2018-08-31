@@ -5,6 +5,8 @@ import edu.ap.spring.jpa.QuoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class QuoteApp {
     private QuoteRepository repository;
@@ -25,10 +27,22 @@ public class QuoteApp {
 
 
     public void saveAllQuotes() {
-        for (int i = 0;i < quotes.length;i++)
+        for (int i = 0;i < (quotes.length - 1);i++)
         {
             Quote newquote = new Quote(quotes[i]);
             repository.save(newquote);
         }
     }
+
+
+    public String[] getAllQuotes() {
+        String[] s = null;
+        int i = 0;
+        Iterable<Quote> iterable = repository.findAll();
+        for (Quote q : iterable) {
+            s[i] = q.getQuote();
+        }
+        return s;
+    }
+
 }

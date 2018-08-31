@@ -9,13 +9,30 @@ import java.awt.event.ActionEvent;
 @Service
 public class EventHandler {
 
-    @Autowired
+
     private UI ui;
     private QuoteApp quoteapp;
 
-    public void whenSaveButtonClicked(ActionEvent actionevent)
+    @Autowired
+    public void setUI(UI ui) {this.ui = ui;}
+
+    @Autowired
+    public void setQuoteapp(QuoteApp quoteapp) {
+        this.quoteapp = quoteapp;
+    }
+
+    public void whenSaveButtonClicked(ActionEvent actionEvent)
     {
         quoteapp.saveAllQuotes();
+    }
+
+    public void whenGetButtonClicked(ActionEvent actionEvent)
+    {
+        String[] s = quoteapp.getAllQuotes();
+        for (int i = 0;i < s.length -1;i++)
+        {
+            ui.getAllequotes().append(s[i]);
+        }
     }
 
 }
